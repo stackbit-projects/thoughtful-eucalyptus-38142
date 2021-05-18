@@ -1,0 +1,165 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match: '**/*'
+    exclude:
+      - index.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+  page_2:
+    type: page
+    label: Page 2
+    match: '*'
+    exclude:
+      - about.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+  home:
+    type: data
+    label: Home
+    file: home.yml
+    fields:
+      - type: list
+        name: navbar_entries
+        label: Navbar Entries
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+      - type: list
+        name: project_entries
+        label: Project Entries
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+            - type: string
+              name: desc
+              label: Desc
+            - type: string
+              name: highlight
+              label: Highlight
+      - type: list
+        name: old_project_entries
+        label: Old Project Entries
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+            - type: string
+              name: desc
+              label: Desc
+            - type: string
+              name: highlight
+              label: Highlight
+      - type: list
+        name: footer_entries
+        label: Footer Entries
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+      - type: list
+        name: misc_entries
+        label: Misc Entries
+        items:
+          type: model
+          models:
+            - object_83bmkvp911
+            - object_3n1k119owo
+  object_rge4nxco1n:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: boolean
+        name: url
+        label: Url
+      - type: list
+        name: entries
+        label: Entries
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: boolean
+              name: url
+              label: Url
+  object_9aeyhlz7bz:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_83bmkvp911:
+    type: object
+    label: Object 3
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: boolean
+        name: post_list
+        label: Post List
+      - type: boolean
+        name: url
+        label: Url
+  object_3n1k119owo:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: boolean
+        name: url
+        label: Url
+      - type: list
+        name: entries
+        label: Entries
+        items:
+          type: model
+          models:
+            - object_rge4nxco1n
+            - object_9aeyhlz7bz
